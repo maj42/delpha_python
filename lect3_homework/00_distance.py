@@ -1,41 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+from itertools import combinations
 
-# Есть словарь координат городов
+
+def calc_dist(city_1: str, city_2: str, precision=2) -> float:
+    """Distance = sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)"""
+    return round(((sites[city_1][0] - sites[city_2][0]) ** 2 + (sites[city_1][1] - sites[city_2][1]) ** 2) ** 0.5,
+                 precision)
+
 
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
-    'Paris': (480, 480),
-}
+    'Paris': (480, 480)}
 
-# Составим словарь словарей расстояний между ними
-# расстояние на координатной сетке - корень из (x1 - x2) ** 2 + (y1 - y2) ** 2
+distances = {}
 
-
-
-# TODO здесь заполнение словаря
-
-msk = sites['Moscow']
-lnd = sites['London']
-prs = sites['Paris']
-
-#Растояния
-msk_lnd = ((msk[0] - lnd[0]) ** 2 + (msk[1] - lnd[1]) ** 2) ** .5
-msk_prs = ((msk[0] - prs[0]) ** 2 + (msk[1] - prs[1]) ** 2) ** .5
-lnd_prs = ((lnd[0] - prs[0]) ** 2 + (lnd[1] - prs[1]) ** 2) ** .5
-
-distances = {
-    "Мск-лнд": round(msk_lnd),
-    "Мск-Париж": round(msk_prs),
-    "Лнд-Париж": round(lnd_prs),
-
-}
-
-
+for permutation in combinations(sites.keys(), 2):
+    city_first, city_second = permutation
+    route = f"{city_first} - {city_second}"
+    distances[route] = calc_dist(city_first, city_second)
 
 print(distances)
-
-
-
-
