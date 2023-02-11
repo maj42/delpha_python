@@ -46,10 +46,10 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
-
-
-
-
-
-
+for item in goods.keys():
+    total_items = 0
+    total_value = 0
+    for stack in store[goods[item]]:
+        total_items += stack["quantity"]
+        total_value += stack["quantity"] * stack["price"]
+    print(f"Товар: {item}, Кол-во: {total_items} шт, Стоимость: {total_value} руб.")

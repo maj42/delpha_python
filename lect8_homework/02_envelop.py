@@ -17,10 +17,16 @@ paper_x, paper_y = 8, 9
 # paper_x, paper_y = 8, 6
 # paper_x, paper_y = 3, 4
 # paper_x, paper_y = 11, 9
-# paper_x, paper_y = 9, 11
+# # paper_x, paper_y = 9, 11
 # (просто раскоментировать нужную строку и проверить свой код)
 
-# TODO здесь ваш код
+if paper_x < envelop_x:
+    if paper_y < envelop_y:
+        print("YES")
+    else:
+        print("NO")
+else:
+    print("NO")
 
 # Усложненное задание, решать по желанию.
 # Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
@@ -28,8 +34,8 @@ paper_x, paper_y = 8, 9
 #
 # Определить, пройдет ли кирпич через отверстие (грани кирпича параллельны сторонам отверстия)
 
-# hole_x, hole_y = 8, 9
-# brick_x, brick_y, brick_z = 11, 10, 2
+hole_x, hole_y = 8, 9
+brick_x, brick_y, brick_z = 11, 10, 2
 # brick_x, brick_y, brick_z = 11, 2, 10
 # brick_x, brick_y, brick_z = 10, 11, 2
 # brick_x, brick_y, brick_z = 10, 2, 11
@@ -49,4 +55,29 @@ paper_x, paper_y = 8, 9
 # brick_x, brick_y, brick_z = 3, 11, 6
 # (просто раскоментировать нужную строку и проверить свой код)
 
-# TODO здесь ваш код
+if brick_x < hole_x:
+    if brick_y < hole_y:
+        print("YES")
+    elif brick_z < hole_y:
+        print("YES")
+    elif brick_x < hole_y:
+        print("NO")
+
+elif brick_y < hole_x:
+    if brick_x < hole_y:
+        print("YES")
+    elif brick_z < hole_y:
+        print("YES")
+    elif brick_y < hole_x:
+        print("NO")
+
+elif brick_z < hole_x:
+    if brick_x < hole_y:
+        print("YES")
+    elif brick_y < hole_y:
+        print("YES")
+    else:
+        print("NO")
+
+else:
+    print("NO")

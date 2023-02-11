@@ -10,5 +10,13 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
+study_months = 10
+month = 1
+total_expence = 0
 
-# TODO здесь ваш код
+while month <= study_months:
+    total_expence += expenses
+    expenses += expenses * 0.03
+    month += 1
+
+print(f"Студенту надо попросить {total_expence - educational_grant * 10:.2f} рублей")

@@ -9,5 +9,10 @@
 #   Целочисленное деление ХХХ на YYY дает ZZZ
 
 a, b = 179, 37
+result = 0
+init_a = a
+while b < a:
+    result += 1
+    a -= b
 
-# TODO здесь ваш код
+print(f"Целочисленное деление {init_a} на {b} дает {result}")
