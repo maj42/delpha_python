@@ -21,9 +21,9 @@ for i in range(max_sym_qty, 0, -1):
     for sym_qty in qty_dict.values():
         if sym_qty >= i:
             # Табуляция для удобства отображения
-            print("#", end="\t")
+            print("#", end="")
         else:
-            print(" ", end="\t")
-    print("\n")
+            print(" ", end="")
+    print("")
 # Сортированная строка
-print("\t".join(qty_dict.keys()))
+print("".join(qty_dict.keys()))
