@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../lect10_hystogram/.idea/lect10_hystogram.iml" filepath="$PROJECT_DIR$/../lect10_hystogram/.idea/lect10_hystogram.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lect3_homework.iml" filepath="$PROJECT_DIR$/.idea/lect3_homework.iml" />
       <module fileurl="file://$PROJECT_DIR$/../lect8_homework/.idea/lect8_homework.iml" filepath="$PROJECT_DIR$/../lect8_homework/.idea/lect8_homework.iml" />
     </modules>
